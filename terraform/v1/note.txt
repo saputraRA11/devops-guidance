@@ -1,0 +1,23 @@
+arch linux install aws:
+
+sudo pacman -S aws-cli 
+
+setup iam in aws
+1) create group
+2) manage access group
+3) create user and assign into group
+4) create credentials
+
+save credentials into .aws in /home/user/.aws
+
+start terraform 
+
+create main.tf
+
+search documentation in here:
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
+
+change script with your configure
+
+

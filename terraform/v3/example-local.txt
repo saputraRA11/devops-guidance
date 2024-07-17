@@ -1,0 +1,4 @@
+locals {
+  service_name = "example-service"
+  owner = "your_name"
+}

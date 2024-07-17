@@ -1,0 +1,14 @@
+1) download provider commands
+2) create management account in provider or manage role access of created account
+3) set credentials of provider account
+4) configure provider with commands in local 
+5) testing configure to provider
+6) explore documentation in terraform registry which one resource do we use
+7) create main tf file
+8) sets up the backend and state storage => terraform init
+9) view the changes Terraform will make to your infrastructure => terraform plan
+10) create the specified resources => terraform apply
+11) clean up resources and avoid unnecessary costs => terraform destroy
+
+
+

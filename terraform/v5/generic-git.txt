@@ -1,0 +1,3 @@
+module "example" {
+  source = "git::ssh://username@example.com/storage.git"
+}

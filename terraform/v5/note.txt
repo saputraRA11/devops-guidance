@@ -1,0 +1,39 @@
+Terraform modules help make your code reuseable, 
+and external modules can be used to provision pre-configured resources.
+
+What is a Module?
+    A module is a container for multiple resources defined within your Terraform configuration, 
+    bundled in a reusable fashion.
+    Modules consist of a collection of .tf or .tf.json files kept together within a single directory. 
+
+Why use Modules?
+    Breaking down the system into different components allows for better organization and specialization within a team.
+    By using modules, infrastructure specialists can define best practices for infrastructure deployment, 
+    which can then be consumed by application developers without having to learn the intricacies of Terraform.
+
+Types of Modules
+    * Root Module: The default module consisting of every .tf file in the main working directory.
+    * Child Module: A separate module referenced from the root module.
+
+Modules Sources
+    * Local Path: Reference a module using a relative path.
+    * Terraform Registry: Reference a module from the Terraform registry.
+    * GitHub: Reference a module using an HTTP or SSH link.
+    * Generic Git Repo: Reference a module using a URL with a username and password.
+
+Module Inputs and Meta-Arguments
+    Child modules can also receive input variables, allowing for greater customization and adaptability. 
+    Meta-arguments like count, for_each, providers, and depends_on can also be used with child modules.
+
+Characteristics of a Good Module
+    * Raise the abstraction level from the base resource type.
+    * Group resources into logical groupings.
+    * Expose necessary input variables for customization.
+    * Provide useful and usable default values.
+    * Return outputs necessary for integration with other systems.
+
+Terraform Registry
+    The Terraform registry hosts many different modules associated with various providers, such as AWS.
+    These modules can serve as a starting point for your projects
+    Modules allow for better organization and specialization within a team, resulting in a more efficient workflow.
+

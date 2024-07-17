@@ -1,0 +1,6 @@
+v1 => intro
+v2 => state environment local and remote
+v3 => variable in terraform
+v4 => additional features terraform (important)
+v5 => usage module terraform
+v6 => management environment

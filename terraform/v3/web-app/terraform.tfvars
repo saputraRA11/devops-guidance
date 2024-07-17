@@ -1,0 +1,5 @@
+bucket_prefix = "web-app-data"
+domain        = "devopsdeployed.com"
+db_name       = "mydb"
+db_user       = "foo"
+db_pass = "saputra11"

@@ -1,0 +1,20 @@
+depends_on:
+    1) create parent.
+    2) create child whose have depends_on with parent.
+
+NOTE: if parent fails to create,child must file same as parent.
+
+
+count: (just index number)
+    1) declare variable length for count inside of resource.
+    2) use variable for looping each index.
+
+
+for_each: flexible
+    1) declare list local variable
+    1) declare variable for looping inside of resource.
+    2) use variable for looping each index.
+
+lifecycle:
+    1) declare lifecycle inside resource
+    2) activate action for lifecycle

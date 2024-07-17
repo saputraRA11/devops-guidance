@@ -1,0 +1,50 @@
+features of the HashiCorp Configuration Language (HCL) used in Terraform. 
+These features can help make your Terraform code more expressive and modular.
+
+Expressions, Operators, and Functions.
+
+    Terraform provides various expressions, operators, 
+    and functions to build dynamic strings, perform arithmetic operations, and use built-in functions. 
+    You can refer to the Terraform documentation for a complete list and usage examples.
+
+Some examples include:
+
+    * Template strings: 
+        Similar to JavaScript, you can use template strings with curly braces to reference variables within a string.
+    * Operators: 
+        Arithmetic and logical operators like multiplication, division, and checking equality are available.
+    * Conditionals: 
+        Ternary syntax can be used for conditional expressions.
+    * For loops: 
+        for loops can be used to loop over a list of configurations.
+    * Splat expressions: 
+        This expands values in a list.
+    * Functions: 
+        Math functions, date and time functions, and hash/crypto functions can be used in your code.
+
+Meta Arguments
+
+    Terraform provides various meta arguments to control the behavior of resources.
+    such as depends_on, count, for_each, and lifecycle.You can find more information in the Terraform documentation.
+
+depends_on
+    This meta argument is used when one resource implicitly depends on another, but there's no direct connection within the config. 
+    For example, if an instance needs access to an S3 bucket, you need to provision the role policy first.
+
+count
+    Use count to create multiple copies of a resource. 
+    This is useful when you have nearly identical resources.
+
+lifecycle
+    The lifecycle meta argument is used to specify the order in which Terraform takes actions, 
+    like creating resources before destroying them, or ignoring changes.
+    lifecycle is powerfull because it has zero downtime to update server.
+
+Provisioners
+    Provisioners allow you to perform actions locally or on remote machines. 
+    You can use file, local-exec, or remote-exec provisioners, or use vendor-specific provisioners like the Ansible provisioner.
+    For more information, refer to the Terraform documentation on provisioners.
+    Throughout the course, we will continue to use some of these advanced language features as 
+    we develop our web application infrastructure. To get the most up-to-date and detailed reference, 
+    make sure to consult the Terraform documentation.
+

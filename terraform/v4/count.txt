@@ -1,0 +1,26 @@
+resource "aws_instance" "example" {
+
+  # ...
+
+  count = 4
+  tags = {
+    Name = "server-${count.index + 1}"
+  }
+}
+
+### for_each
+
+`for_each` is similar to count, but it provides more control over each resource. It allows you to loop through an iterable and create resources based on its values.
+
+```json
+locals {
+  subnets = ["subnet-abc123", "subnet-def456"]
+}
+
+resource "aws_instance" "example" {
+
+  # ...
+
+  for_each = toset(local.subnets)
+  subnet_id = each.value
+}

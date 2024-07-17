@@ -1,0 +1,17 @@
+1) deploy setup
+
+example:
+1) create variables.tf
+2) create terraform.tfvars
+3) create outputs.tf
+4) deploy it
+
+webapp:
+1) create variables.tf
+2) create terraform.tfvars
+3) create outputs.tf
+4) deploy it
+
+destroy:
+1) destroy webapp and example
+2) destroy setup

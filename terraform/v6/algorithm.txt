@@ -1,0 +1,12 @@
+workspace:
+1) create workspace with "terraform workspace new <name_workspace>
+2) change into workspace with "terraform workspace select <new_workspace>
+3) deploy it
+
+file_structures
+1) create 3 folder, 1 for route zone and 2 for environment
+2) each zone must have main.tf
+3) deploy route zone
+4) deploy each environment
+5) destroy environment
+6) destroy zone

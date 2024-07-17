@@ -1,0 +1,11 @@
+deploy:
+
+1) deploy setup
+2) create module web app
+3) create web-app and main file
+4) import web-app-module
+5) deploy it
+
+destroy:
+1) destroy web-app
+2) destroy setup

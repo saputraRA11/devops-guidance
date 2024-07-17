@@ -1,0 +1,50 @@
+The general sequence of Terraform commands:
+
+1) terraform init: Initializes your project
+2) terraform plan: Checks your configuration against the current state and generates a plan
+3) terraform apply: Applies the plan to create or update your infrastructure
+4) terraform destroy: Removes resources when no longer needed
+
+Terraform Provider Architecture:
+
+1) Terraform Core: Provides the engine for parsing configurations and state files
+2) Providers: Connects Terraform Core with specific cloud services
+
+when terraform init, we download necessary providers and store them in the .terraform directory. 
+The .terraform.lock.hcl file contains information about the installed dependencies and providers
+
+Modules, reusable Terraform code bundles, are also downloaded and stored in the .terraform directory.
+
+Understanding the State File:
+
+* The state file is a JSON file containing information about resources and data objects deployed using Terraform
+* It includes metadata and other essential information about each resource
+* The state file may contain sensitive information, so it must be protected and encrypted
+
+Storing the State File:
+
+* Local Backend: The state file is stored within the working directory of the project
+* Remote Backend: The state file is stored in a remote object store or a managed service like Terraform Cloud
+
+Remote Backend Options:
+
+* Terraform Cloud (managed offering)
+* Self-managed remote backends (e.g., Amazon S3, Google Cloud Storage)
+
+Terraform Plan Command:
+
+* Compares the desired state (Terraform configuration) with the actual state (Terraform state file)
+* Identifies any discrepancies between the two states
+* Outputs the differences and the actions needed to reconcile the states
+
+Terraform Apply Command:
+
+* Executes the actions identified in the Terraform Plan command
+* Creates, modifies, or deletes resources as needed to match the desired state
+* Updates the Terraform state file to reflect the changes
+
+Terraform Destroy Command:
+
+* Removes all resources associated with the Terraform configuration
+* Use with caution, as it permanently deletes resources
+* Typically used to clean up resources at the end of a project or example

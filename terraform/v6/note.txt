@@ -1,0 +1,28 @@
+the two primary approaches used for managing multiple environments with Terraform: 
+    * workspaces 
+    * separate subdirectories.
+
+Terraform Workspaces
+    Terraform Workspaces are a feature that allows you to break your Terraform state into separate configurations.
+    This allows you to manage multiple environments, each with their own unique portion of the state file.
+
+    Pros:
+        * Easy to get started with.
+        * Minimizes code duplication between environments.
+        * Convenient as you can reference terraform.workspace as an expression within your Terraform files to populate names of resources.
+    Cons:
+        * Can be dangerous if you accidentally apply changes to the wrong environment.
+        * State files are stored within the same remote back end, making permissioning and access challenging.
+        * Cannot easily determine the deployed state by simply looking at the codebase.
+
+Separate Subdirectories
+    The alternative to using workspaces, is to define separate environments as separate directories within the filesystem. 
+    You have one directory (and its children) for each environment you plan to deploy.
+
+    Pros:
+        * Isolates back ends, allowing for separate back-end configurations and improved security.
+        * Decreases potential for human error as environments are managed separately.
+        * The codebase fully represents the deployed state, making it easier to understand.
+    Cons:
+        * Requires navigating between subdirectories to apply changes to each environment.
+        * More code duplication as each main.tf file represents a similar configuration.

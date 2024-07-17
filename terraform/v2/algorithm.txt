@@ -1,0 +1,12 @@
+deploy:
+
+1) backend local_v1 
+2) backend remote_v1
+3) web_app
+
+destroy:
+
+1) backend local_v1 
+2) web_app
+
+
